@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>WAP3.4</display-name>
-  <welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>WAP4.0</display-name>
+ <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>/jsp/index.html</welcome-file>
   </welcome-file-list>
@@ -468,14 +468,10 @@
     <servlet-name>RequestFilterServlet</servlet-name>
     <url-pattern>/RequestFilterServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>loginForm4</servlet-name>
-    <jsp-file>/jsp/servlet/ch11/spring/login.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>loginForm4</servlet-name>
-    <url-pattern>/loginForm4.view</url-pattern>
-  </servlet-mapping>
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>loginForm4</servlet-name> -->
+<!--     <url-pattern>/loginForm4.view</url-pattern> -->
+<!--   </servlet-mapping> -->
   <jsp-config>
     <jsp-property-group>
       <description>Property group for common configuration for all the JSP's</description>
@@ -494,34 +490,15 @@
     <exception-type>javax.servlet.ServletException</exception-type>
     <location>/jsp/ch02/unavailable.jsp</location>
   </error-page>
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/spring/root-context.xml</param-value>
-  </context-param>
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  <servlet>
-    <servlet-name>appServlet</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
-    </init-param>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>appServlet</servlet-name>
-    <url-pattern>/spring/*</url-pattern>
-  </servlet-mapping>
-  <resource-ref>
-    <description>
-      This defines a JNDI resource reference for
-      java:comp/env/jdbc/DerbyJPADS DataSource which
-      is formally declared in the domain.xml.
-    </description>
-    <res-ref-name>jdbc/DerbyJPADS</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-  </resource-ref>
+ 
+<!--   <resource-ref> -->
+<!--     <description> -->
+<!--       This defines a JNDI resource reference for -->
+<!--       java:comp/env/jdbc/DerbyJPADS DataSource which -->
+<!--       is formally declared in the domain.xml. -->
+<!--     </description> -->
+<!--     <res-ref-name>jdbc/DerbyJPADS</res-ref-name> -->
+<!--     <res-type>javax.sql.DataSource</res-type> -->
+<!--     <res-auth>Container</res-auth> -->
+<!--   </resource-ref> -->
 </web-app>
