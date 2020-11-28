@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+	<employee type="normal">
+		<id>00132</id>
+		<name>John Doe</name>
+		<address>
+			<street> 1 Main </street>
+			<city>Springfield</city>
+			<state>ST</state>
+			<zip>45673</zip>
+		</address>
+		<email>jdoe@example.com</email>
+		<department>Sales</department>
+		<salary>45000</salary>
+	</employee>
+	<employee type="manager">
+		<id>88502</id>
+		<name>Akin Kaldiroglu</name>
+		<address>
+			<street>6475 Frenchmens Dr.</street>
+			<city>Alexandria</city>
+			<state>VA</state>
+			<zip>22312</zip>
+		</address>
+		<email>akink@javaturk.org</email>
+		<department>Education</department>
+		<salary>85000</salary>
+	</employee>
+</employees> 
