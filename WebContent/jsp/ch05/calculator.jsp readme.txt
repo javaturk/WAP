@@ -1,0 +1,4 @@
+Change the target as  calculationResult2.jsp and calculationResult3.jsp in the folowing line
+to see how to set request parameters automatically as bean properties. 
+
+<form method="post" action="/wap/jsp/ch05/calculationResult1.jsp">

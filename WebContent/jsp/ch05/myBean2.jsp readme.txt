@@ -1,0 +1,5 @@
+jsp.ch05cmyBean2.jsp should access "mySerializedBean.ser" file. It works on Tomcat when the file is put
+under "\WEB-INF\classes" of wap application. But for Eclipse-Tomcat I can't make it worked.
+I tried to put the ser file into numerous places but to no avail.
+
+To create "mySerializedBean.ser" file run wap.jsp.ch05.BeanSerializer.

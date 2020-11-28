@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<link rel="stylesheet" type="text/css" href="css/mystyles.css"> 
+<TITLE>Web Application Programming with Java 3.4 Examples</TITLE>
+</HEAD>
+
+<div class="appTitle">
+<H1 ALIGN="CENTER">www.JavaTurk.org</H1>
+<H1 ALIGN="CENTER">Web Application Programming with Java 3.4 Examples</H1>
+<H2 ALIGN="CENTER">Examples in this application are all compliant to Servlet 3.1 and Java EE 7.</H2>
+<H3 ALIGN="CENTER">Latest build date is Feb. 26th 2019</H3>
+<H3 ALIGN="CENTER">All rights belong to Akin Kaldiroglu.</H3>
+<H4 ALIGN="CENTER">To contact him please send an email to <a href="mailto:akin@javaturk.org">akin@javaturk.org</a> .</H4>
+<H3 ALIGN="CENTER">Please read <a href="ReadMe.html">ReadMe.html</a> to make some configuration.</H3>
+</div>
+
+<H2 ALIGN="CENTER"><A HREF="html/index.html">(HTMLs)</A></H2>
+<H2 ALIGN="CENTER"><A HREF="jsp/index.html">(JSPs)</A></H2>
+
+<div class="pageHeader">
+	<H1 ALIGN="CENTER"><b>Servlets</b></H1>
+</div>
+
+<H3 ALIGN="CENTER">Ch01 Introduction to Servlets and JSPs</H3>
+<H3>
+<UL>
+
+</UL>
+</H3>
+
+<H3 ALIGN="CENTER">Ch02 Web Applications Basics</H3>
+<H3>
+<UL>
+	<LI><A HREF="BasicServlet">BasicServlet</A><H4>Has doGet(), doPost() and doHead() methods and prints out headers. Use WebClient for Post and Head methods.</H4></LI>
+	<LI><A HREF="OnlyServlet">OnlyServlet</A>via <A HREF="html/ch03/onlyservletget.html">GET</A> and via <A HREF="html/ch03/onlyservletpost.html">POST</A><H4>Implements <i>Servlet</i> interface, overrides <i>service()</i> method and prints out info on the ServetRequest object.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch03 Basics of HTTP</H3>
+<H3>
+<UL>
+	<LI><A HREF="http://localhost:8888">util.echoserver.EchoServer</A><H4> runs as a server and listens to port 8888 and prints whatever it gets. Before clicking the link launch it!</H4></LI>
+	<LI><A HREF="SourceCodeServlet?name=org.javaturk.wap.util.webclient.WebClient">WebClient</A><H4> is a simple browser that let's you send HTTP requests manually and shows the response received from the server as both text and html.</H4></LI>
+	<LI><A HREF="SourceCodeServlet?name=org.javaturk.wap.ch03.HttpClient">HttpClient</A><H4>A class with a main method that connects to a URL on the web and prints out headers and HTML content downloaded using streams.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch04 Servlet Basics</H3>
+<H3>
+<UL>
+	<LI><A HREF="SelamServlet">SelamServlet</A><H4> Says "Selam". And below its Servlet 3.0 version:</H4></LI>
+	<LI><A HREF="SelamServlet3">SelamServlet3</A><H4> Says "Selam3".</H4></LI>
+	<LI><A HREF="selam">selam</A>, <A HREF="SelamServlet">selam/s</A><H4> All say "Selam". And its other URLs: <A HREF="selam3">selam3</A>, <A HREF="s3/s">s3/s</A> All say "Selam3".</LI>
+	<LI><A HREF="HelloJapanServlet">HelloJapanServlet</A><H4>Says "Selam" in Japanese.</H4></LI>
+	<LI><A HREF="HelloArabicServlet">HelloArabicServlet</A><H4>Says "Selam" in Arabic.</H4></LI>
+	<LI><A HREF="GenericSelamServlet">GenericSelamServlet</A> via <A HREF="html/ch04/genericservletget.html">GET</A> and via <A HREF="html/ch04/genericservletpost.html">POST</A><H4>Extends GenericServlet and runs only the service() method.</H4></LI>
+	<LI><A HREF="ServletInterfaceSelamServlet">ServletInterfaceSelamServlet</A><H4>Implements Servlet interface and runs only the service() method.</H4></LI>
+	<LI><A HREF="TemplateServlet">TemplateServlet</A><H4>It extends <a href="SourceCodeServlet?name=org.javaturk.wap.util.BaseServlet">org.javaturk.wap.util.BaseServlet</a></H4></LI>
+	<LI><A HREF="LifeCycleServlet1">LifeCycleServlet1</A><H4>Shows the life cycle of the servlets. It Implements Servlet interface and runs only the service() method.</H4></LI>
+	<LI><A HREF="LifeCycleServlet2">LifeCycleServlet2</A><H4>Shows the life cycle of the servlets. It extends HttpServlet class and overrides doGet() and doPost() methods.</H4></LI>
+	<LI><A HREF="LifeCycleServlet3">LifeCycleServlet3</A><H4>Shows the life cycle of the servlets with @PostConstruct and @PreDestroy annotations. It also implements Servlet interface and runs only the service() method.</H4></LI>
+	<LI><A HREF="SimpleCounterServlet">SimpleCounterServlet</A><H4>Uses an instance variable.</H4></LI>
+	<LI><A HREF="SingleInstanceServlet1">SingleInstanceServlet-1</A><H4>Shows the effect of declaring a servlet twice in web.xml.</H4></LI>
+	<LI><A HREF="SingleInstanceServlet2">SingleInstanceServlet-2</A><H4>Shows the effect of declaring a servlet twice in web.xml.</H4></LI>
+	<LI><A HREF="ATMServlet">ATMServlet</A><H4>Shows the effect of running under many threads.</H4></LI>
+	<LI><A HREF="ATMServlet2">ATMServlet2</A><H4>ATMServlet that implements SingleThreadModel.</H4></LI>
+	<LI><A HREF="FlushingServlet">FlushingServlet</A><H4>Shows the effect of flush().</H4></LI>
+	<LI><A HREF="InitializationOrderServlet0">InitializationOrderServlet0</A><H4>Shows the effect "loadOnStartup" attribute.</H4></LI>
+	<LI><A HREF="InitializationOrderServlet1">InitializationOrderServlet1</A><H4>Shows the effect "loadOnStartup" attribute.</H4></LI>
+	<LI><A HREF="InitializationOrderServlet2">InitializationOrderServlet2</A><H4>Shows the effect "loadOnStartup" attribute.</H4></LI>
+	<LI><A HREF="InitializationOrderServlet3">InitializationOrderServlet3</A><H4>Shows the effect "loadOnStartup" attribute.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch05 Retrieving Information</H3>
+<H3>
+<UL>
+	<LI><A HREF="InitialParameterServlet">InitialParameterServlet</A> <H4>Loads initial parameters from web.xml through ServletConfig.</H4></LI>
+	<LI><A HREF="InitialParameterServlet3">InitialParameterServlet3</A> <H4>Loads initial parameters using annotations through ServletConfig.</H4></LI>
+	<LI><A HREF="ContextParameterServlet">ContextParameterServlet</A> <H4>Loads initial parameters from web.xml through ServletContext.</H4></LI>
+	<LI><A HREF="ServletContextServlet">ServletContextServlet</A> <H4>Lists ServletContext attributes set by the servlet container.</H4></LI>
+	<LI><A HREF="AttributeSenderServlet">AttributeSenderServlet</A> <H4>Sends an object through ServletContext.</H4></LI>
+	<LI><A HREF="AttributeReceiverServlet">AttributeReceiverServlet</A> <H4>Receives an object through ServletContext.</H4></LI>
+	<LI><A HREF="AttributeRemoverServlet">AttributeRemoverServlet</A> <H4>Removes the attribute "name" added to ServletContext by AttributeSenderServlet.</H4></LI>
+	<LI><A HREF="ClientInformationServlet">ClientInformationServlet</A><H4>Lists all client information on HttpRequest.</H4></LI>
+	<LI><A HREF="RequestHeadersServlet">RequestHeadersServlet</A><H4>Lists all HTTP headers on HttpRequest.</H4></LI>
+	<LI><A HREF="BrowserCheckerServlet">BrowserCheckerServlet</A><H4>Check user's browser.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch06 Sending The Response</H3>
+<H3>
+<UL>
+	<LI><A HREF="StatusCodesServlet">StatusCodesServlet</A><H4>Shows how to use status codes.</H4></LI>
+	<LI><A HREF="TargetServlet">TargetServlet</A><H4>Prints its referrer. It is redirected by <A HREF="RedirectingServlet">RedirectingServlet</A></H4></LI>
+	<LI><A HREF="RedirectingServlet">RedirectingServlet</A><H4>Redirects to <A HREF="TargetServlet">TargetServlet</A> using sendRedirect() method.</H4></LI>
+	<LI><A HREF="ContentLengthServlet">ContentLengthServlet</A><H4>Enter different values for content length and see its effect.</H4></LI>
+	<LI><A HREF="FileServerServlet">FileServerServlet</A><H4>Choose among different types to load files. It uses MIME types for content type. Bot setContentType() and setHeader() are used.</H4></LI>
+	<LI><A HREF="BufferingServlet">BufferingServlet</A><H4></H4></LI>
+	<LI><A HREF="AutoFlushingServlet">AutoFlushingServlet</A><H4>Run this servlet on Opera web browser to see the flushing effect.</H4></LI>
+	<LI><A HREF="ClientSideCachingServlet">ClientSideCachingServlet</A><H4>Output is cached at the browser at first access and then subsequent accesses serve it from the cache. Use Chrome's inspect or Firefox Firebug to see caching.</H4></LI>
+	<LI><A HREF="UnavailableServlet">UnavailableServlet</A><H4></H4></LI>
+	<LI><A HREF="FirstServlet">FirstServlet</A><H4>Includes or forwards to <i>SecondServlet</i></H4></LI>
+	<LI><A HREF="SecondServlet">SecondServlet</A><H4>Included or forwarded to by <i>FirstServlet</i></H4></LI>
+	<LI><A HREF="IncludedServlet">IncludedServlet</A><H4>Included servlet.</H4></LI>
+	<LI><A HREF="ForwardedServlet">ForwardedServlet</A><H4>Forwarded servlet.</H4></LI>
+	<LI><A HREF="RequestDispatcherInclude">RequestDispatcherInclude</A><H4>Includes IncludedServlet.</H4></LI>
+	<LI><A HREF="RequestDispatcherForward">RequestDispatcherForward</A><H4>Forwards to ForwardedServlet.</H4></LI>
+	<LI><A HREF="RequestAttributeSender">RequestAttributeSender</A><H4>Forwards to <A HREF="RequestAttributeReceiver">RequestAttributeReceiver</A> and passes attributes using request object.</H4></LI>
+	<LI><A HREF="SourceCodeServlet?name=org.javaturk.wap.ch06.ServletExceptionProducer">ServletExceptionProducer</A><H4>Servlet that is shown when a ServletException occurs. Click <A HREF="ServletExceptionProducer">here</A> to produce a ServletException</H4></LI>
+	<LI><A HREF="HiddenPageServingServlet">HiddenPageServingServlet</A><H4>forwards to <a href="WEB-INF/hidden.html"> WEB-INF/hidden.html </a> which can not be accessed directly. Files under WEB-INF directory aren't served directly.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch07 Handling HTML Forms</H3>
+<H3>
+<UL>
+	<LI><A HREF="html/ch07/getFormServlet.html">GetFormServlet</A><H4>An HTML page that submits to GetFormServlet using GET method.</H4></LI>
+	<LI><A HREF="html/ch07/postFormServlet.html">PostFormServlet</A><H4>An HTML page that submits to PostFormServlet using POST method.</H4></LI>
+	<LI><A HREF="ParameterServlet">ParameterServlet</A><H4>Displays a form in doGet() method and then submits to itself using POST method.</H4></LI>
+	<LI><A HREF="DefaultValuesFormServlet">DefaultValuesFormServlet</A><H4>Displays a form in doGet() method with default values and then submits to itself using POST method.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch08 Session Management</H3>
+<H3>
+</br>
+
+<UL>
+	<LI><A HREF="CookieServlet">CookieServlet</A><H4></H4></LI>
+	<LI><A HREF="CheckCookieServlet">CheckCookieServlet</A><H4></H4></LI>
+	<LI><A HREF="CookieAttributesServlet">CookieAttributesServlet</A><H4></H4></LI>
+	<LI><A HREF="ExpiringCookie">ExpiringCookie</A><H4>Cookie sent in this servlet will expire in 30 seconds. If you click after 30 seconds the cookie won't be sent back to server.</H4></LI>
+	<LI><A HREF="SessionCookie">SessionCookie</A><H4>A session cookie sent in this servlet. If you close the browser it'll get deleted.</H4></LI>
+	<LI><A HREF="HitCounterServlet1">HitCounterServlet1</A><H4> uses HttpSession object to manage hit counter.</H4></LI>
+	<LI><A HREF="HitCounterServlet2">HitCounterServlet2</A><H4> uses HttpSession object to manage hit counter.</H4></LI>
+	<LI><A HREF="SessionInformationServlet">SessionInformationServlet</A><H4> prints the information about the session created in HitCounterServlet(s).</H4></LI>
+	<LI><A HREF="TemperatureConverterServlet">TemperatureConverterServlet</A><H4> converts among different temperature measurement systems.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch09 Servlet Listener and Events</H3>
+<H3>
+<UL>
+	
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch09.listener.ContextListener">ContextListener</a><H4> implements <i>ServletContextListener</i> and <i>ServletContextAttributeListener</i>. Click <A HREF="ContextAttributeServlet">ContextAttributeServlet</A> to invoke this listener.</H4></LI>
+		<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch09.listener3.ContextListener3">ContextListener 3.0</a><H4> implements <i>ServletContextListener</i> and <i>ServletContextAttributeListener</i>. Click <A HREF="ContextAttributeServlet">ContextAttributeServlet</A> to invoke this listener.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch09.listener.RequestListener">RequestListener</a><H4> implements <i>ServletRequestListener</i> and <i>ServletRequestAttributeListener</i>.</H4></LI>
+	<P>
+	<LI><A HREF="ContextAttributeServlet">ContextAttributeServlet</A><H4> Invokes the events of ServletContextAttributeListener</H4></LI>
+	<LI><A HREF="SessionInvalidatorServlet">SessionInvalidatorServlet</A><H4> Invalidates the current session.</H4></LI>
+	</P>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch10 Servlet Filters</H3>
+<H3>
+<UL>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.AllFilter">AllFilter</a>, <a href="SourceCodeServlet?name=org.javaturk.wap.ch10.AllFilter3">AllFilter3</a> <H4>is configured for /*.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.LogFilter">LogFilter</a> <H4>is configured for /* and logs everything.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.SelamFilter">SelamFilter</a> <H4>is configured for /SelamServlet.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.RequestFilter">RequestFilter</a> <H4>is configured for /RequestFilterServlet.</H4></LI>
+	<LI><A HREF="RequestFilterServlet">RequestFilterServlet</A> <H4>Prints when <i>doGet()</i> is called.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.ResponseFilter">ResponseFilter</a> <H4>is configured for /ResponseFilterServlet.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.IncludeFilter">IncludeFilter</a> <H4>is configured for /IncludedServlet when included.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch10.ForwardFilter">ForwardFilter</a> <H4>is configured for /ForwardedServlet when forwarded.</H4></LI>
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch11 Servlet 3.0: Advanced Features</H3>
+<H3>
+<UL>
+	<LI><a href="SelamServlet3">SelamServlet3</A><H4>SelamServlet configured as a 3.0 servlet through <code>WebServlet</code> annotation.</H4></LI>
+	<LI><A HREF="InitialParameterServlet3">InitialParameterServlet3</A> <H4>Loads initial parameters using annotations through ServletConfig. Parameters are registered through <code>WebInitParam</code> in <code>WebServlet</code> annotation.</H4></LI>
+	<LI><A HREF="SourceCodeServlet?name=org.javaturk.wap.ch11.dynamic.DynamicServletRegistration">DynamicServletRegistration</A><H4>is a ServletContextListener and registers following three entitites:</H4>
+	   <UL>
+	   		<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch11.dynamic.DynamicServlet">DynamicServlet</A><H4> is registered dynamically.</H4></LI>
+			<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch11.dynamic.DynamicFilter">DynamicFilter</A><H4> is registered dynamically. Notice that DynamicFilter will filter DynamicServlet and log to "C:\logDynamic.txt".</H4></LI>
+			<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch11.dynamic.DynamicRequestListener">DynamicRequestListener</A><H4> is registered dynamically. Notice that DynamicRequestListener will listen to request events.</H4></LI>
+		</UL>
+	</LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch11.multipart.FileUploadServlet">FileUploadServlet</A><H4>FileUploadServlet is a servlet that is configured  with @MultipartConfig. To upload a file go <A HREF="jsp/servlet/ch12/upload.jsp">upload.jsp</A></H4></LI>
+	<LI><a href="PrimeNumberCounterServlet">PrimeNumberCounterServlet</A><H4>Counts all prime numbers up to given limit.<H4></LI>
+	<LI><a href="AsynchPrimeNumberCounterServlet">AsynchPrimeNumberCounterServlet</A><H4>Counts all prime numbers up to given limit using asynchronous servlet.<H4></LI>
+<!-- 	<LI><a href="AsynchServlet">AsynchServlet</A></H4></LI> -->
+</UL>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch12 Servlet 4.0 (In future)</H3>
+<H3>
+</H3>
+</br>
+
+<H3 ALIGN="CENTER">Ch13 Web Application Architectures</H3>
+<H3>
+<UL>
+	<LI><a href="loginForm1.view">LoginFormView1</A><H4>The entrance servlet to the Login application built using all-servlets approach that employs the MVC pattern. It uses RequestDispatcher object to dispatch requests.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch13.login.allServlet.LoginController">LoginController</A><H4>The controller servlet used for this example.</H4></LI>
+	<br/>
+	<LI><a href="loginForm2.view">LoginFormView</A><H4>The entrance servlet to the Login application built using Model-2 architecture using servlets as controllers and JSPs as views. It uses RequestDispatcher object to dispatch requests.</H4></LI>
+	<LI><a href="SourceCodeServlet?name=org.javaturk.wap.ch13.login.model2.LoginController2">LoginController</A><H4>The controller servlet used for this example.</H4></LI>
+	<br/>
+	<LI><a href="jsp/servlet/ch13/spring/login.jsp">LoginFormSpring</A><H4>The Spring MVC-implementation of the Login application. All views are in JSPs.</H4></LI>
+</UL>
+</H3>
+</br>
+
+	
+<H3 ALIGN="CENTER">Util</H3>
+<H3>
+<UL>
+	<LI><A HREF="SourceCodeServlet?name=org.javaturk.wap.util.SourceCodeServlet">SourceCodeServlet</A></LI>
+	<LI><A HREF="SourceCodeServlet?name=web.xml">web.xml</A></LI>
+</UL>
+</H3>
+</br>
+
+
+<H3 ALIGN="CENTER">Appendix-1: Databases in Web Applications</H3>
+<H3>
+<UL>
+	<LI><A HREF="JDBCServlet">JDBCServlet</A>
+	<LI><A HREF="DataSourceServlet">DataSourceServlet</A>
+</UL>
+</H3>
+</br>
+<!-- </BODY> -->
+</HTML>
